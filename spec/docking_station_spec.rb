@@ -20,3 +20,17 @@ describe 'Gets bike and expects it to be working' do
   end
 
 end
+
+describe DockingStation do
+  it { should respond_to(:dock).with(1).argument}
+end
+
+describe 'docking station to dock bike' do
+  bike = Bike.new
+  docking_station = DockingStation.new
+  docking_station.dock(bike)
+
+  it 'should dock the bike' do
+    expect(docking_station.bikes[0]).to eq bike
+  end
+end
