@@ -1,9 +1,5 @@
 require 'boris_bikes'
 
 describe DockingStation do
-
+  it { should respond_to(:release_bike)}
 end
-
-# it "releases bike" do
-#   expect(docking_station.release).to eq "Bike released"
-# end
